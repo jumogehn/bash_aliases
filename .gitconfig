@@ -1,0 +1,50 @@
+[user]
+	name = Jumogehn H.
+	email = jumogehn@gmail.com
+[color]
+	ui = auto
+[merge]
+	tool = meld
+[core]
+	editor = vim
+#      	eol = lf
+#	autocrlf = false
+#       packedGitLimit = 512m
+#       packedGitWindowSize = 512m
+#	compression = 0
+#[pack]
+#       deltaCacheSize = 2047m
+#       packSizeLimit = 2047m
+#       windowMemory = 2047m
+#[filter "lfs"]
+#	process = git-lfs filter-process
+#	required = true
+#	clean = git-lfs clean -- %f
+#	smudge = git-lfs smudge -- %f
+[alias]
+	co = checkout
+	tco = checkout
+	br = branch
+	tbr = branch
+	ci = commit
+	tci = commit
+	st = status
+	tst = status
+	tdiff = diff
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	visual = !gitk
+	l = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+	tl = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+	l1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --abbrev-commit
+	tl1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --abbrev-commit
+	l2 = log --pretty=format:\"%h %s\" --graph --all
+	tl2 = log --pretty=format:\"%h %s\" --graph --all
+
+[diff]
+        tool = meld
+[difftool]
+        prompt = false
+[difftool "meld"]
+        cmd = meld "$LOCAL" "$REMOTE"
+
